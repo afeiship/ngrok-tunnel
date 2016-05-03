@@ -24,7 +24,7 @@ exports.paths = {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  exclude: [/jquery/],
+  exclude: [/jquery/,'bower_components/ionic/release/css/ionic.css'],
   directory: 'bower_components'
 };
 

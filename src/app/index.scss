@@ -2,6 +2,8 @@
    sass dependencies when defined in the bower.json of your dependencies */
 // bower:scss
 // endbower
+
+
 //$positive: #FF764C;
 $balanced: #32b77d;
 $assertive: #fe3553;
@@ -14,8 +16,11 @@ $dark: #2F3E4E;
 $button-border-width: 0;
 $red: #D0021B;
 $green:#66B35E;
+
+
+$ionicons-font-path: "../../bower_components/ionic/release/fonts";
 @import "../../bower_components/ionic/scss/ionic";
-$border-color: #f0f0f0;
+
 
 
 

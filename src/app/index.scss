@@ -1,0 +1,25 @@
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+//$positive: #FF764C;
+$balanced: #32b77d;
+$assertive: #fe3553;
+$calm: #FF908F;
+$energized: #FF764C;
+$stable: #f8f8f8;
+$gray: #999;
+$white: #fff;
+$dark: #2F3E4E;
+$button-border-width: 0;
+$red: #D0021B;
+$green:#66B35E;
+@import "../../bower_components/ionic/scss/ionic";
+$border-color: #f0f0f0;
+
+
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector

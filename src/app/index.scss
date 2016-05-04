@@ -4,9 +4,8 @@
 // endbower
 
 
-//$positive: #FF764C;
 $balanced: #32b77d;
-$assertive: #fe3553;
+$assertive: #b50f22;
 $calm: #FF908F;
 $energized: #FF764C;
 $stable: #f8f8f8;
@@ -15,12 +14,116 @@ $white: #fff;
 $dark: #2F3E4E;
 $button-border-width: 0;
 $red: #D0021B;
-$green:#66B35E;
-
-
+$green: #66B35E;
+$blank-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 30, 40, 50);
+$font-size-map: (
+  from:10,
+  to:30
+);
 $ionicons-font-path: "../../bower_components/ionic/release/fonts";
-@import "../../bower_components/ionic/scss/ionic";
 
+@import "../../bower_components/ionic/scss/ionic";
+html, body,
+.dc-app {
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0 !important;;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.round {
+  border-radius: 1000px;
+}
+
+.blank {
+  display: block;
+  font-size: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+@mixin mask{
+  background: rgba(#000,0.8);
+}
+
+@mixin w1($inNumber) {
+  width: #{100/$inNumber+'%'};
+}
+
+@mixin font-size-generator($inFontMap) {
+  $from: map_get($inFontMap, 'from');
+  $to: map_get($inFontMap, 'to');
+  @for $i from $from through $to {
+    .f#{$i} {
+      font-size: #{$i}px;
+    }
+  }
+}
+
+.blank {
+  @each $i in $blank-list {
+    &-#{$i} {
+      height: #{$i}px;
+      @extend .blank;
+    }
+  }
+}
+
+.w1 {
+  @for $i from 1 through 10 {
+    &-#{$i} {
+      &,
+      &_ > * {
+        @include w1($i);
+      }
+    }
+  }
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.margin-horizontal {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.margin-vertical {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@include font-size-generator($font-size-map);
+
+.white {
+  color: #fff;
+}
+
+.white-bg {
+  background: #fff;
+}
 
 
 

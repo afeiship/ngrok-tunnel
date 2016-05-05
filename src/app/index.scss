@@ -3,7 +3,6 @@
 // bower:scss
 // endbower
 
-
 $balanced: #32b77d;
 $assertive: #b50f22;
 $calm: #FF908F;
@@ -20,12 +19,22 @@ $font-size-map: (
   from:10,
   to:30
 );
+$color-map: (
+  0:#000,
+  3:#333,
+  6:#666,
+  9:#999,
+  f:#fff,
+  c:#ccc,
+  d:#ddd
+);
 $ionicons-font-path: "../../bower_components/ionic/release/fonts";
 
 @import "../../bower_components/ionic/scss/ionic";
 html, body,
-.dc-app {
+.ionic-wechat-app {
   height: 100%;
+  background: #f2f2f2;
 }
 
 .no-padding {
@@ -51,8 +60,8 @@ html, body,
   clear: both;
 }
 
-@mixin mask{
-  background: rgba(#000,0.8);
+@mixin mask {
+  background: rgba(#000, 0.8);
 }
 
 @mixin w1($inNumber) {
@@ -124,8 +133,6 @@ html, body,
 .white-bg {
   background: #fff;
 }
-
-
 
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */

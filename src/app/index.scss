@@ -104,7 +104,7 @@ html, body,
 }
 
 .w1 {
-  @for $i from 1 through #{$width-max-percent} {
+  @for $i from 1 through $width-max-percent {
     &-#{$i} {
       &,
       &_ > * {
@@ -113,6 +113,8 @@ html, body,
     }
   }
 }
+
+
 
 .margin-left {
   margin-left: 10px;

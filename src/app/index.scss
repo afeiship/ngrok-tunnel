@@ -9,6 +9,7 @@ $calm: #FF908F;
 $energized: #FF764C;
 $stable: #f8f8f8;
 
+$width-max-percent:20;
 $blank-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 30, 40, 50);
 $font-size-map: (
   from:10,
@@ -24,6 +25,7 @@ $color-map: (
   d:#ddd,
   gray:#f2f2f2
 );
+
 $ionicons-font-path: "../../bower_components/ionic/release/fonts";
 
 @import "../../bower_components/ionic/scss/ionic";
@@ -74,6 +76,24 @@ html, body,
   }
 }
 
+//background
+@mixin background-color-generator($inColorMap) {
+  @each $name, $color in $inColorMap {
+    .bg-#{$name} {
+      background-color: #{$color};
+    }
+  }
+}
+
+//color:
+@mixin color-generator($inColorMap) {
+  @each $name, $color in $inColorMap {
+    .c-#{$name} {
+      color: #{$color};
+    }
+  }
+}
+
 .blank {
   @each $i in $blank-list {
     &-#{$i} {
@@ -84,7 +104,7 @@ html, body,
 }
 
 .w1 {
-  @for $i from 1 through 10 {
+  @for $i from 1 through #{$width-max-percent} {
     &-#{$i} {
       &,
       &_ > * {
@@ -121,14 +141,8 @@ html, body,
 }
 
 @include font-size-generator($font-size-map);
-
-.white {
-  color: #fff;
-}
-
-.white-bg {
-  background: #fff;
-}
+@include color-generator($color-map);
+@include background-color-generator($color-map);
 
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */

@@ -9,26 +9,10 @@ $calm: #FF908F;
 $energized: #FF764C;
 $stable: #f8f8f8;
 
-$width-max-percent:20;
-$blank-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 30, 40, 50);
-$font-size-map: (
-  from:10,
-  to:30
-);
-$color-map: (
-  0:#000,
-  3:#333,
-  6:#666,
-  9:#999,
-  f:#fff,
-  c:#ccc,
-  d:#ddd,
-  gray:#f2f2f2
-);
-
 $ionicons-font-path: "../../bower_components/ionic/release/fonts";
 
 @import "../../bower_components/ionic/scss/ionic";
+@import "../../bower_components/ionic-sass-helper/src/style";
 html, body,
 .ionic-wechat-app {
   height: 100%;
@@ -39,112 +23,9 @@ html, body,
   padding: 0 !important;;
 }
 
-.w100 {
-  width: 100%;
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-.round {
-  border-radius: 1000px;
-}
-
-.blank {
-  display: block;
-  font-size: 0;
-  overflow: hidden;
-  clear: both;
-}
-
 @mixin mask {
   background: rgba(#000, 0.8);
 }
-
-@mixin w1($inNumber) {
-  width: #{100/$inNumber+'%'};
-}
-
-@mixin font-size-generator($inFontMap) {
-  $from: map_get($inFontMap, 'from');
-  $to: map_get($inFontMap, 'to');
-  @for $i from $from through $to {
-    .f#{$i} {
-      font-size: #{$i}px;
-    }
-  }
-}
-
-//background
-@mixin background-color-generator($inColorMap) {
-  @each $name, $color in $inColorMap {
-    .bg-#{$name} {
-      background-color: #{$color};
-    }
-  }
-}
-
-//color:
-@mixin color-generator($inColorMap) {
-  @each $name, $color in $inColorMap {
-    .c-#{$name} {
-      color: #{$color};
-    }
-  }
-}
-
-.blank {
-  @each $i in $blank-list {
-    &-#{$i} {
-      height: #{$i}px;
-      @extend .blank;
-    }
-  }
-}
-
-.w1 {
-  @for $i from 1 through $width-max-percent {
-    &-#{$i} {
-      &,
-      &_ > * {
-        @include w1($i);
-      }
-    }
-  }
-}
-
-
-
-.margin-left {
-  margin-left: 10px;
-}
-
-.margin-right {
-  margin-right: 10px;
-}
-
-.margin-top {
-  margin-top: 10px;
-}
-
-.margin-bottom {
-  margin-bottom: 10px;
-}
-
-.margin-horizontal {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.margin-vertical {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-@include font-size-generator($font-size-map);
-@include color-generator($color-map);
-@include background-color-generator($color-map);
 
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */

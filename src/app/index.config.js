@@ -6,7 +6,7 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig,localStorageServiceProvider) {
+  function config($logProvider, toastrConfig, localStorageServiceProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
 
@@ -22,6 +22,9 @@
       .setPrefix('dacang')
       .setStorageType('localStorage')
       .setNotify(true, true);
+
+    //localStorageService.set('key','value')/localStorageService.get('key')
+
   }
 
 })();

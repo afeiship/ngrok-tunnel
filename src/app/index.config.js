@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -6,16 +6,22 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig) {
+  function config($logProvider, toastrConfig,localStorageServiceProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
 
     // Set options third-party lib
     toastrConfig.allowHtml = true;
     toastrConfig.timeOut = 3000;
-    toastrConfig.positionClass = 'toast-top-right';
+    toastrConfig.positionClass = 'toast-center';
     toastrConfig.preventDuplicates = true;
     toastrConfig.progressBar = true;
+
+    //localstorage config:
+    localStorageServiceProvider
+      .setPrefix('dacang')
+      .setStorageType('localStorage')
+      .setNotify(true, true);
   }
 
 })();

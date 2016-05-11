@@ -11,3 +11,8 @@
 - `$ gulp protractor` to launch your e2e tests with Protractor
 - `$ gulp protractor:dist` to launch your e2e tests with Protractor on the dist files
 
+##resources:
++ http://ionicframework.com/docs/
++ https://docs.angularjs.org/api
++ http://siddii.github.io/angular-timer/
++ https://github.com/grevory/angular-local-storage

@@ -8,19 +8,20 @@ var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
 
+//todo:optimize html min:
 gulp.task('partials', function () {
   return gulp.src([
-    path.join(conf.paths.src, '/app/**/*.html'),
-    path.join(conf.paths.tmp, '/serve/app/**/*.html')
-  ])
+      path.join(conf.paths.src, '/app/**/*.html'),
+      path.join(conf.paths.tmp, '/serve/app/**/*.html')
+    ])
     .pipe($.htmlmin({
       removeEmptyAttributes: true,
       removeAttributeQuotes: true,
-      collapseBooleanAttributes: true,
+      collapseBooleanAttributes: false,
       collapseWhitespace: true
     }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'ionicWechatApp',
+      module: 'dacangWechat',
       root: 'app'
     }))
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
@@ -44,7 +45,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(jsFilter)
     .pipe($.sourcemaps.init())
     .pipe($.ngAnnotate())
-    .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
+    .pipe($.uglify({ preserveComments: $.uglifySaveLicense ,mangle: true})).on('error', conf.errorHandler('Uglify'))
     .pipe($.rev())
     .pipe($.sourcemaps.write('maps'))
     .pipe(jsFilter.restore)
@@ -65,7 +66,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(htmlFilter.restore)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')))
     .pipe($.size({ title: path.join(conf.paths.dist, '/'), showFiles: true }));
-  });
+});
 
 // Only applies for fonts from bower dependencies
 // Custom fonts are handled by the "other" task
@@ -82,9 +83,9 @@ gulp.task('other', function () {
   });
 
   return gulp.src([
-    path.join(conf.paths.src, '/**/*'),
-    path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss}')
-  ])
+      path.join(conf.paths.src, '/**/*'),
+      path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss}')
+    ])
     .pipe(fileFilter)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });

@@ -5,14 +5,14 @@
     .module('ionicWechatApp')
     .service('ApiService', ApiService);
 
-  var APISERVER = '';
+  var extend = angular.extend;
 
   /** @ngInject */
-  function ApiService($http) {
+  function ApiService($http, APISERVER) {
     //base methods:
     this.REQUEST = function (inMethod, inName, inOptions) {
       return $http(
-        angular.extend({
+        extend({
           method: inMethod,
           dataType: 'json',
           url: _getUrl(inName)
@@ -21,13 +21,17 @@
     };
 
     this.GET = function (inName, inOptions) {
-      var url = _getUrl(inName);
-      return $http.get(url, inOptions);
+      var params = inOptions.data || inOptions.params || {};
+      return this.REQUEST(
+        'GET', inName,
+        extend(inOptions, {
+          params: params
+        })
+      );
     };
 
     this.POST = function (inName, inOptions) {
-      var url = _getUrl(inName);
-      return $http.post(url, inOptions.data || {}, inOptions);
+      return this.REQUEST('POST', inName, inOptions);
     };
 
 

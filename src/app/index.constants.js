@@ -5,6 +5,7 @@
   angular
     .module('ionicWechatApp')
     .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .constant('moment', moment)
+    .constant('APISERVER', 'http://www.api.com/v1');
 
 })();

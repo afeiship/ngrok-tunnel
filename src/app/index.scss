@@ -29,6 +29,20 @@ html, body,
   background: rgba(#000, 0.8);
 }
 
+.col-10,
+.col-20,
+.col-25,
+.col-33,
+.col-34,
+.col-50,
+.col-66,
+.col-67,
+.col-75,
+.col-80,
+.col-90 {
+  -webkit-box-flex: 1;
+}
+
 .slider-pager {
   .slider-pager-page {
     color: $slide-pager-page-color;

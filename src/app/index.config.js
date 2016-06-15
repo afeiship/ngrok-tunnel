@@ -14,8 +14,9 @@
     toastrConfig.allowHtml = true;
     toastrConfig.timeOut = 3000;
     toastrConfig.positionClass = 'toast-center';
-    toastrConfig.preventDuplicates = true;
-    toastrConfig.progressBar = true;
+    toastrConfig.preventDuplicates = false;
+    toastrConfig.preventOpenDuplicates = true;
+    toastrConfig.progressBar = false;
 
     //localstorage config:
     localStorageServiceProvider

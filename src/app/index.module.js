@@ -13,7 +13,8 @@
       'ui.router',
       'toastr',
       'timer',
-      'LocalStorageModule'
+      'LocalStorageModule',
+      'nx.widget'
     ]);
 
 })();

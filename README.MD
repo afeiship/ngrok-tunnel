@@ -1,4 +1,4 @@
-#ionic-wechat-app
+#<%= project_name %>
 + Ionic wechat app based on ionic & angular.
 
 ##command

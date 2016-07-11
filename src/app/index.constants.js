@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('ionicWechatApp')
+    .module('<%= projectName %>')
     .constant('malarkey', malarkey)
     .constant('moment', moment)
     .constant('APISERVER', 'http://www.api.com/v1');

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ionicWechatApp')
+    .module('<%= projectName %>')
     .directive('acmeMalarkey', acmeMalarkey);
 
   /** @ngInject */

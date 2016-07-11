@@ -16,7 +16,7 @@ $ionicons-font-path: "../fonts";
 @import "../../bower_components/ionic/scss/ionic";
 @import "../../bower_components/ionic-sass-helper/src/style";
 html, body,
-.ionic-wechat-app {
+.<%= project_name %> {
   height: 100%;
   background: #f2f2f2;
 }

@@ -12,7 +12,7 @@
     var el;
     var timeInMs;
 
-    beforeEach(module('ionicWechatApp'));
+    beforeEach(module('<%= projectName %>'));
     beforeEach(inject(function($compile, $rootScope) {
       // spyOn(_$window_, 'moment').and.callThrough();
       // $window = _$window_;

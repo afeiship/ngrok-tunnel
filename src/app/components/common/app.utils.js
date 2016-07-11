@@ -3,7 +3,7 @@
 
 
   angular
-    .module('ionicWechatApp')
+    .module('<%= projectName %>')
     .factory('utils', utils);
 
   function utils() {

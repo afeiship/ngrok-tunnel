@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ionicWechatApp')
+    .module('<%= projectName %>')
     .service('ApiService', ApiService);
 
   var extend = angular.extend;

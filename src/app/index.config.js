@@ -20,7 +20,7 @@
 
     //localstorage config:
     localStorageServiceProvider
-      .setPrefix('dacang')
+      .setPrefix('iwa')
       .setStorageType('localStorage')
       .setNotify(true, true);
 

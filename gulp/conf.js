@@ -14,8 +14,7 @@ var gutil = require('gulp-util');
 exports.paths = {
   src: 'src',
   dist: 'dist',
-  tmp: '.tmp',
-  e2e: 'e2e'
+  tmp: '.tmp'
 };
 
 /**
@@ -24,7 +23,7 @@ exports.paths = {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  exclude: [/jquery/,'bower_components/ionic/release/css/ionic.css'],
+  exclude: [/jquery/, 'bower_components/ionic/release/css/ionic.css'],
   directory: 'bower_components'
 };
 

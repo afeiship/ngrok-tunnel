@@ -1,5 +1,5 @@
 {
-  "name": "<%= projectName %>",
+  "name": "<%= project_name %>",
   "version": "0.0.0",
   "dependencies": {
     "angular-animate": "~1.5.3",

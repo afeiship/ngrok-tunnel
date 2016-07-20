@@ -50,5 +50,6 @@ var buildStyles = function() {
     .pipe($.sass(sassOptions)).on('error', conf.errorHandler('Sass'))
     .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
     .pipe($.sourcemaps.write())
+    .pipe($.replace('../bower_components/ionic/release/fonts','fonts'))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));
 };

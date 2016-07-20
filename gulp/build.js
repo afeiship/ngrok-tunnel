@@ -77,6 +77,13 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
 
+gulp.task('fonts-serve', function () {
+    return gulp.src($.mainBowerFiles())
+        .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
+        .pipe($.flatten())
+        .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/fonts/')));
+});
+
 gulp.task('other', function () {
   var fileFilter = $.filter(function (file) {
     return file.stat.isFile();

@@ -38,9 +38,9 @@
     ./ding -config=./ding.cfg -subdomain=abcde 8080
     ```
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gtqhxrn3jmj612e0aawfb02.jpg)
-
-1. 启动完客户端后，你访问 `http://abcde.vaiwan.com/xxxxx` 都会映射到 `http://127.0.0.1:8080/xxxxx`
+3. 启动完客户端后，你访问 `http://abcde.vaiwan.com/xxxxx` 都会映射到 `http://127.0.0.1:8080/xxxxx`
+   
+   ![](https://tva1.sinaimg.cn/large/008i3skNgy1gtqhxrn3jmj612e0aawfb02.jpg)
 
 ### 参数说明
 | 参数       | 说明                                                                                                                       |

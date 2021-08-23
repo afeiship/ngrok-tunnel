@@ -13,6 +13,10 @@
 
 1. 启动内网穿透, 下载工具。
 ```shell
+git clone git@github.com:afeiship/ngrok-tunnel.git
+git clone https://github.com/afeiship/ngrok-tunnel.git
+
+# 或者这个
 git clone https://github.com/open-dingtalk/pierced.git
 ```
 

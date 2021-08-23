@@ -12,6 +12,7 @@
 
 
 1. 启动内网穿透, 下载工具。
+    
     ```shell
     git clone git@github.com:afeiship/ngrok-tunnel.git
     git clone https://github.com/afeiship/ngrok-tunnel.git
@@ -22,11 +23,12 @@
 
 2. 执行以下命令，启动工具。
 > Windows执行以下命令：
-    ~~~shell
+    
+    ```shell
     # 说明 Windows需使用cmd工具打开命令行。
     cd windows_64
     ding -config=ding.cfg -subdomain=abcde 8080
-    ~~~
+    ```
 
 > MAC执行以下命令：
 
@@ -38,7 +40,7 @@
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gtqhxrn3jmj612e0aawfb02.jpg)
 
-3. 启动完客户端后，你访问 `http://abcde.vaiwan.com/xxxxx` 都会映射到 `http://127.0.0.1:8080/xxxxx`
+1. 启动完客户端后，你访问 `http://abcde.vaiwan.com/xxxxx` 都会映射到 `http://127.0.0.1:8080/xxxxx`
 
 ### 参数说明
 | 参数       | 说明                                                                                                                       |

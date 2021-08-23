@@ -12,29 +12,29 @@
 
 
 1. 启动内网穿透, 下载工具。
-```shell
-git clone git@github.com:afeiship/ngrok-tunnel.git
-git clone https://github.com/afeiship/ngrok-tunnel.git
+    ```shell
+    git clone git@github.com:afeiship/ngrok-tunnel.git
+    git clone https://github.com/afeiship/ngrok-tunnel.git
 
-# 或者这个
-git clone https://github.com/open-dingtalk/pierced.git
-```
+    # 或者这个
+    git clone https://github.com/open-dingtalk/pierced.git
+    ```
 
 2. 执行以下命令，启动工具。
 > Windows执行以下命令：
-~~~shell
-# 说明 Windows需使用cmd工具打开命令行。
-cd windows_64
-ding -config=ding.cfg -subdomain=abcde 8080
-~~~
+    ~~~shell
+    # 说明 Windows需使用cmd工具打开命令行。
+    cd windows_64
+    ding -config=ding.cfg -subdomain=abcde 8080
+    ~~~
 
 > MAC执行以下命令：
 
-```shell
-cd mac_64
-chmod 777 ./ding
-./ding -config=./ding.cfg -subdomain=abcde 8080
-```
+    ```shell
+    cd mac_64
+    chmod 777 ./ding
+    ./ding -config=./ding.cfg -subdomain=abcde 8080
+    ```
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gtqhxrn3jmj612e0aawfb02.jpg)
 

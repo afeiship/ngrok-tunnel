@@ -22,7 +22,7 @@
     ```
 
 2. 执行以下命令，启动工具。
-> Windows执行以下命令：
+    > Windows执行以下命令：
     
     ```shell
     # 说明 Windows需使用cmd工具打开命令行。
@@ -30,7 +30,7 @@
     ding -config=ding.cfg -subdomain=abcde 8080
     ```
 
-> MAC执行以下命令：
+    > MAC执行以下命令：
 
     ```shell
     cd mac_64

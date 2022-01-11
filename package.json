@@ -1,0 +1,21 @@
+{
+  "name": "@jswork/ngrok-tunnel",
+  "version": "1.0.0",
+  "description": "钉钉内网穿透.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/ngrok-tunnel.git"
+  },
+  "keywords": [
+    "ngrok",
+    "tunnel",
+    "dingtalk"
+  ],
+  "author": "afeiship",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/ngrok-tunnel/issues"
+  },
+  "homepage": "https://github.com/afeiship/ngrok-tunnel#readme"
+}

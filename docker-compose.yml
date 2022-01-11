@@ -1,0 +1,8 @@
+version: "3"
+services:
+  ngrok-tunnel:
+    image: "alpine:latest"
+    volumes:
+      - ./linux:/app
+      - ./data:/app/data
+    # entrypoint: sh -c "cd /app && chmod 777 ./ding && ./ding -config=./ding.cfg -subdomain=abc 8080"

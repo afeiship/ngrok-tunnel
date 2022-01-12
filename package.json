@@ -2,7 +2,12 @@
   "name": "@jswork/ngrok-tunnel",
   "version": "1.0.0",
   "description": "钉钉内网穿透.",
-  "scripts": {},
+  "scripts": {
+    "start": "docker-compose up",
+    "start-d": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "restart": "docker-compose restart"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afeiship/ngrok-tunnel.git"

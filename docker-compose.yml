@@ -2,7 +2,11 @@ version: "3"
 services:
   ngrok-tunnel:
     image: "alpine:latest"
+    stdin_open: true
+    tty: true
     volumes:
       - ./linux:/app
       - ./data:/app/data
+      - ./entrypoint.sh:/entrypoint.sh
+    entrypoint: sh -c "/entrypoint.sh"
     # entrypoint: sh -c "cd /app && chmod 777 ./ding && ./ding -config=./ding.cfg -subdomain=abc 8080"

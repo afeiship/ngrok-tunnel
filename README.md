@@ -34,7 +34,7 @@
     > MAC执行以下命令：
 
     ```shell
-    cd mac_64
+    cd mac
     chmod 777 ./ding
     ./ding -config=./ding.cfg -subdomain=abcde 8080
     ```

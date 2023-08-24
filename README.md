@@ -1,5 +1,5 @@
 # ngrok-tunnel
-> 钉钉内网穿透.
+> 钉钉内网穿透(deprecated,钉钉已经下线，所以这个无法访问).
 > https://github.com/open-dingtalk/dingtalk-pierced-client
 > https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration
 
